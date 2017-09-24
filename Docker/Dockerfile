@@ -34,6 +34,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php -r "unlink('composer-setup.php');"
 
 RUN mv composer.phar /usr/bin/composer
+RUN cd /var/www/html/project/ && composer install && php artisan key:generate
 
 # install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh && bash nodesource_setup.sh
