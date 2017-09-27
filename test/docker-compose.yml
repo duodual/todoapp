@@ -35,7 +35,7 @@ services:
   mariadb:
     build: ./Docker/mariadb
     volumes:
-      - ${DATA_SAVE_PATH}/mariadb:/var/lib/mysql
+      - ${DATA_SAVE_PATH}/mariadb/lib:/var/lib/mysql
     ports:
       - "${DB_PORT}:3306"
     environment:
