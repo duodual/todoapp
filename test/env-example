@@ -1,0 +1,15 @@
+# Nginx variables
+NGINX_HOST_HTTP_PORT=80
+NGINX_HOST_HTTPS_PORT=443
+NGINX_HOST_LOG_PATH=./log
+
+# PHP variables
+PHP_VERSION=71
+
+# DB variables
+DATA_SAVE_PATH=./Docker/mariadb/mysql
+DB_PORT=3306
+DB_DATABASE=test
+DB_USER=root
+DB_PASSWORD=root
+DB_ROOT_PASSWORD=root

@@ -1,5 +1,10 @@
-FROM nginx:alpine
+FROM nginx:mainline
 
-ADD ./sites/default /etc/nginx/sites-available/
+ADD nginx.conf /etc/nginx/
+ADD ./sites/default /etc/nginx/sites-available/default.conf
 
-CMD ["nginx", "-g", "daemon off;"]
+RUN adduser -D -H -u 1000 -s /bin/bash www-data
+
+EXPOSE 80 443
+
+CMD ["nginx"]
