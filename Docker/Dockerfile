@@ -24,7 +24,7 @@ RUN apt-get install -y --force-yes\
         git
 
 # nginx and php 7 config
-RUN mv test/php.ini /etc/php/7.0/fpm/php.ini &&
+RUN mv test/php.ini /etc/php/7.0/fpm/php.ini
 RUN mv test/default /etc/nginx/sites-available/default && service nginx reload
 
 # install composer
@@ -34,11 +34,11 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php -r "unlink('composer-setup.php');"
 
 RUN mv composer.phar /usr/bin/composer
-RUN cd /var/www/html/project/ && composer install && php artisan key:generate
+# RUN cd /var/www/html/project/ && composer install && php artisan key:generate
 
 # install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh && bash nodesource_setup.sh
 RUN apt-get install -y nodejs build-essential
 
 
-CMD service php7.0-fpm start && nging -g "daemon off;"
+CMD service php7.0-fpm start && nginx -g "daemon off;"
