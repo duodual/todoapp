@@ -1,13 +1,18 @@
+# Application vars
+APP_HOST_DIR=/var/www/public
+APP_DIR=./yay
+
 # Nginx variables
 NGINX_HOST_HTTP_PORT=80
 NGINX_HOST_HTTPS_PORT=443
 NGINX_HOST_LOG_PATH=./log
+NGINX_HOST_DIR=
 
 # PHP variables
 PHP_VERSION=71
 
 # DB variables
-DATA_SAVE_PATH=./Docker/mariadb/mysql
+DATA_SAVE_PATH=./Docker/mariadb/lib
 DB_PORT=3306
 DB_DATABASE=test
 DB_USER=root
