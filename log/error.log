@@ -1,0 +1,43 @@
+2017/10/11 00:35:55 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 00:38:19 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 00:39:06 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 00:39:19 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 00:43:28 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 00:45:22 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 00:46:20 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 00:47:00 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 00:51:28 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 00:59:04 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 01:09:52 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 01:12:23 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 01:23:40 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 01:24:51 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 01:27:42 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 01:32:05 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 01:40:03 [emerg] 1#1: invalid URL prefix in /etc/nginx/sites-available/default.conf:11
+2017/10/11 01:41:24 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET / HTTP/1.1", upstream: "http://0.0.0.0:4000/", host: "0.0.0.0"
+2017/10/11 01:41:25 [error] 7#7: *1 open() "/var/www/public/public/favicon.ico" failed (2: No such file or directory), client: 172.22.0.1, server: php-fpm, request: "GET /favicon.ico HTTP/1.1", host: "0.0.0.0", referrer: "http://0.0.0.0/"
+2017/10/11 01:41:29 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET / HTTP/1.1", upstream: "http://0.0.0.0:4000/", host: "0.0.0.0"
+2017/10/11 01:41:30 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET / HTTP/1.1", upstream: "http://0.0.0.0:4000/", host: "0.0.0.0"
+2017/10/11 01:41:33 [error] 7#7: *1 open() "/var/www/public/public/todo" failed (2: No such file or directory), client: 172.22.0.1, server: php-fpm, request: "GET /todo HTTP/1.1", host: "0.0.0.0"
+2017/10/11 01:41:40 [error] 7#7: *1 open() "/var/www/public/public/todo/index.php" failed (2: No such file or directory), client: 172.22.0.1, server: php-fpm, request: "GET /todo/index.php HTTP/1.1", host: "0.0.0.0"
+2017/10/11 01:41:53 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET / HTTP/1.1", upstream: "http://0.0.0.0:4000/", host: "0.0.0.0"
+2017/10/11 01:41:56 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET / HTTP/1.1", upstream: "http://0.0.0.0:4000/", host: "0.0.0.0"
+2017/10/11 01:42:06 [error] 7#7: *1 open() "/var/www/public/public/cxczv" failed (2: No such file or directory), client: 172.22.0.1, server: php-fpm, request: "GET /cxczv HTTP/1.1", host: "0.0.0.0"
+2017/10/11 01:42:41 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET / HTTP/1.1", upstream: "http://0.0.0.0:4000/", host: "0.0.0.0"
+2017/10/11 01:42:47 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET / HTTP/1.1", upstream: "http://0.0.0.0:4000/", host: "0.0.0.0"
+2017/10/11 01:42:50 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET / HTTP/1.1", upstream: "http://0.0.0.0:4000/", host: "0.0.0.0"
+2017/10/11 01:43:02 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET / HTTP/1.1", upstream: "http://0.0.0.0:4000/", host: "0.0.0.0"
+2017/10/11 01:43:08 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET / HTTP/1.1", upstream: "http://0.0.0.0:4000/", host: "0.0.0.0"
+2017/10/11 20:15:38 [emerg] 1#1: invalid number of arguments in "root" directive in /etc/nginx/sites-available/default.conf:26
+2017/10/11 20:16:36 [emerg] 1#1: invalid number of arguments in "root" directive in /etc/nginx/sites-available/default.conf:26
+2017/10/11 20:17:52 [error] 7#7: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/todo/public/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/todo/public/index.php on line 24
+PHP message: PHP Fatal error:  require(): Failed opening required '/var/www/todo/public/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/todo/public/index.php on line 24" while reading response header from upstream, client: 172.22.0.1, server: php-fpm, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://172.22.0.2:9000", host: "0.0.0.0"
+2017/10/11 20:22:38 [error] 8#8: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/todo/public/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/todo/public/index.php on line 24
+PHP message: PHP Fatal error:  require(): Failed opening required '/var/www/todo/public/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/todo/public/index.php on line 24" while reading response header from upstream, client: 172.22.0.1, server: php-fpm, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://172.22.0.4:9000", host: "0.0.0.0"
+2017/10/11 20:44:35 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/sites-available/default.conf:27
+2017/10/11 20:45:43 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/sites-available/default.conf:27
+2017/10/11 21:30:11 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/sites-available/default.conf:27
+2017/10/11 21:31:10 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/sites-available/default.conf:27
+2017/10/11 21:44:19 [error] 6#6: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://172.22.0.4:9000", host: "0.0.0.0"
+2017/10/11 21:45:39 [error] 6#6: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.22.0.1, server: php-fpm, request: "GET /todo/ HTTP/1.1", upstream: "fastcgi://172.22.0.4:9000", host: "0.0.0.0"

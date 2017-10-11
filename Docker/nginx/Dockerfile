@@ -1,7 +1,7 @@
 FROM nginx:mainline
 
-ADD nginx.conf /etc/nginx/
-ADD ./sites/default /etc/nginx/sites-available/default.conf
+COPY nginx.conf /etc/nginx/
+COPY ./sites/default.conf /etc/nginx/sites-available/default.conf
 
 RUN adduser -D -H -u 1000 -s /bin/bash www-data
 
