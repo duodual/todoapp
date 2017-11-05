@@ -3,7 +3,6 @@ T_HOST_DIR=/var/www/todo
 T_DIR=./tsrc
 
 # Gate way Application vars
-GW_ENTRY=server.js
 GW_HOST_DIR=/var/www/public
 GW_DIR=./gsrc
 
