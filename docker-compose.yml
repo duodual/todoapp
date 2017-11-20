@@ -8,68 +8,112 @@ services:
   #   volumes:
   #     - ${T_DIR}:${T_HOST_DIR}
 
-  # Nuxt Todo
-
-
-  # Gate Way
-  gate-way:
+  # UI (Nuxt SSR)
+  ui:
     build:
-      args:
-        - DIR=${GW_HOST_DIR}
-      context: ./Docker/gate-way
-    networks:
-      - backend
-
-  # PHP-fpm
-  php-fpm:
-    build:
-      context: ./Docker/php-fpm
-      dockerfile: "Dockerfile-${PHP_VERSION}"
+      context: ./UI
     volumes:
-      - ${T_DIR}:${T_HOST_DIR}
-      - ./Docker/php-fpm/php${PHP_VERSION}.ini:/usr/local/etc/php/php.ini
-    expose:
-      - "9000"
+      - ./UI:/home/app/todo
+      - /home/app/todo/node_modules
+    ports:
+      - '8999:3333'
     networks:
-      - backend
+      - public
+      - api-gateway
 
-  # Nginx
-  nginx:
+  # Api Gateway
+  api-gateway:
     build:
-      context: ./Docker/nginx
-    depends_on:
-      - gate-way
-      - php-fpm
+      context: ./ApiGateway
     ports:
       - "${NGINX_HOST_HTTP_PORT}:80"
       - "${NGINX_HOST_HTTPS_PORT}:443"
+    networks:
+      - api-gateway
+      - vpc
     volumes:
-      - ${T_DIR}:${T_HOST_DIR}
       - ${NGINX_HOST_LOG_PATH}:/var/log/nginx
-    networks:
-      - frontend
-      - backend
-
-  # MariaDB
-  mariadb:
-    build: ./Docker/mariadb
+  # Todo
+  todo:
+    build:
+      context: ./Todo
     volumes:
-      - ${DATA_SAVE_PATH}:/var/lib/mysql
-    ports:
-      - "${DB_PORT}:3306"
-    environment:
-      - MYSQL_DATABASE=${DB_DATABASE}
-      - MYSQL_USER=${DB_USER}
-      - MYSQL_PASSWORD=${DB_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - ./Todo:/home/app/todo
+      - /home/app/todo/node_modules
     networks:
-      - backend
+      - vpc
+  #
+  # auth:
+  #   build:
+  #     context: ./Auth
+  #   volumes:
+  #
+  #   networks:
+  #     - vpc
+
+#------------------------------
+  # # Gate Way
+  # gate-way:
+  #   build:
+  #     args:
+  #       - DIR=${GW_HOST_DIR}
+  #     context: ./Docker/gate-way
+  #   networks:
+  #     - backend
+  #
+  # # PHP-fpm
+  # php-fpm:
+  #   build:
+  #     context: ./Docker/php-fpm
+  #     dockerfile: "Dockerfile-${PHP_VERSION}"
+  #   volumes:
+  #     - ${T_DIR}:${T_HOST_DIR}
+  #     - ./Docker/php-fpm/php${PHP_VERSION}.ini:/usr/local/etc/php/php.ini
+  #   expose:
+  #     - "9000"
+  #   networks:
+  #     - backend
+  #
+  # # Nginx
+  # nginx:
+  #   build:
+  #     context: ./Docker/nginx
+  #   depends_on:
+  #     - gate-way
+  #     - php-fpm
+  #   ports:
+  #     - "${NGINX_HOST_HTTP_PORT}:80"
+  #     - "${NGINX_HOST_HTTPS_PORT}:443"
+  #   volumes:
+  #     - ${T_DIR}:${T_HOST_DIR}
+  #     - ${NGINX_HOST_LOG_PATH}:/var/log/nginx
+  #   networks:
+  #     - frontend
+  #     - backend
+  #
+  # # MariaDB
+  # mariadb:
+  #   build: ./Docker/mariadb
+  #   volumes:
+  #     - ${DATA_SAVE_PATH}:/var/lib/mysql
+  #   ports:
+  #     - "${DB_PORT}:3306"
+  #   environment:
+  #     - MYSQL_DATABASE=${DB_DATABASE}
+  #     - MYSQL_USER=${DB_USER}
+  #     - MYSQL_PASSWORD=${DB_PASSWORD}
+  #     - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+  #   networks:
+  #     - backend
 
 ## Networt
 networks:
-  frontend:
+  public:
     driver: 'bridge'
-  backend:
+  api-gateway:
     driver: 'bridge'
+  vpc:
+    driver: 'bridge'
+
 
 ## Volumes

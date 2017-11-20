@@ -1,0 +1,21 @@
+{
+  "description": "Todo UI SSR engine",
+  "directories": {
+    "test": "test"
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3333"
+    }
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aresyang.php@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "nuxt": "^1.0.0-rc11"
+  }
+}
